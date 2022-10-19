@@ -1,0 +1,18 @@
+# Build single LSTM (Long short-term memory) model
+
+# Hyper parameters that can be manually changed for testing 
+int DimentionEmbeddingLayer 
+int DimentionLSTMLayer 
+
+inputLayer = Input(shape=(TrainingPadShape, ))
+outputLayers = Embedding(VocabSize, DimentionEmbeddingLayer)(inputLayer) 
+outputLayers = LSTM(DimentionLSTMLayer, return_sequences=True)(outputLayers)
+outputLayers = GlobalMaxPooling1D()(outputLayers)
+outputLayers = Dense({Node number}, activation="relu")(outputLayers)
+outputLayers = Dense(1, activation="sigmoid")(outputLayers)
+
+create Model(inputLayer, outputLayers)
+
+
+
+

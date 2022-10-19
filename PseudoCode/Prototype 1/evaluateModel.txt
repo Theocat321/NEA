@@ -1,0 +1,9 @@
+# Evaulate Model
+
+model.summary() # provides a detailed diagram of each layer including the parameters and shape of layer
+
+# Getting a usable score for the model
+score = model.evaluate(test_padded, y_test)
+print("Model Loss: ", score[0])b
+print("Model accuracy", score[1])
+

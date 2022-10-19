@@ -1,0 +1,46 @@
+# Clean dataframe
+
+# function for cleaning data
+def clean_data(data):
+
+    remove new lines:
+    data = data removed new lines
+
+    remove single quotes:
+    data = data removed single quotes
+
+    remove full stops:
+    data = data removed full stops
+
+    remove emails:
+    data = data removed emails 
+
+    remove links:
+    link_compiler = format for links
+    data = data removed links
+
+    remove mentions
+    data = data removed common conventions for mentions
+
+    remove hashtags
+    data = data removed hashtags
+
+    remove retweet signs
+    data = data removed retweet
+
+    return data 
+endfunction
+
+# Remove irrelevant columns
+dfcsv.drop({columns to be removed}) 
+
+# Remove rows with null values
+dfcsv.dropna()
+
+# Apply text cleaning function to data
+dfcsv[{column}] = dfcsv[{column}].apply(text_cleaning)
+
+Display first 10 lines of df
+
+#Convert 
+

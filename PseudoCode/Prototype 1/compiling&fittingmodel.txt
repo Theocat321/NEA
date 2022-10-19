@@ -1,0 +1,5 @@
+# Compiling the model
+
+model.compile(optimizer={optimizer},loss={loss type},metrics=["accuracy"])
+
+fittingData = model.fit(train_padded, y_train, validation_data=(test_padded,y_test),epochs={num})

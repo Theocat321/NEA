@@ -1,0 +1,7 @@
+# Get data from csv file and turn Data into pandas dataframe
+
+dfcsv = create pd dataframe from csv
+Display first 5 rows of df (dataframe)
+Display information about df, like datatypes, number of entries and column names
+Calculate the sum of null values in dataframe by calling library function
+

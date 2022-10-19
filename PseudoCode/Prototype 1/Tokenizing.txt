@@ -1,0 +1,33 @@
+# Convert strings into integers using a tokenizer
+
+# Build tokenizer
+tokenizer = tensorFlow_tokenizor(num_words={estimate of vocab in dataset})
+tokenizer.fit(x_train)
+
+# Check tokenizer and vocab in dataset
+wordindex = tokenizer.word_index
+VocabSize = len(wordindex)
+print(VocabSize) # outputs the amount of vocab in dataset
+
+#Protoype 3 will require this tokenizer to be serialised for JS - will worry about this in prototype 3
+
+# Convert training and test data into sequences of integers
+
+train_seq = tokenizer.texts_to_sequences(x_train) # Compares all the data to vocab and assigns a integer reference for the vocab 
+test_seq = tokenizer.texts_to_sequences(x_test)
+
+# Check sequences are converted
+
+print(train_seq[0])
+print(test_seq[0])
+
+# PAD sequences so they are all the same length as the inputs must all be of same length
+
+train_padded = pad_sequences(train_seq)
+test_padded = pad_sequences(test_seq)
+
+# Check size of each padded sequence
+print(train_padded.shape[1])
+print(test_padded.shape[1])
+
+TrainingPadShape = train_padded.shape[1] # for use when defining the model shape 

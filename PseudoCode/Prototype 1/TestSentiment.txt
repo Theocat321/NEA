@@ -1,0 +1,22 @@
+# testing sentiment of manual inputs
+
+def predict_sentiment(text):
+    # Convert inputted text into indivual words and apply the word embedding
+    text_sequence = tokenizer.texts_to_sequences(text)
+
+    # Padd the array to have the same shape as the required input {TrainingPadShape}
+    text_padded = pad_sequences(text_sequence, maxlen=TrainingPadShape)
+
+    # Output a text reult as to the sentiment
+    predicted_sentiment = model.predict(text_padded)
+    if predicted_sentiment < 0.3:
+        print("Negative")
+    elif predicted_sentiment > 0.75:
+        print("Positive")
+    else:
+        print("Neutral")
+    print(predicted_sentiment)
+
+text = ['{inputted text}']
+predict_sentiment(text)
+

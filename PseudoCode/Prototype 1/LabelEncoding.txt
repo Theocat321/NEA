@@ -1,0 +1,19 @@
+# Convert classification strings to integers
+
+def sentiment_encoder(data):
+    # Changes the string in the dataframe to integer
+    if data == "positive"
+        data = 1
+    elif data == "negative"
+        data = 0
+    elif data == "neutral"
+        data = 0.5
+    else:
+        data = None
+    endif 
+    return data
+endfunction
+
+dfcsv[{column}] = dfcsv[{column}].apply(sentiment_encoder)
+dfscv.dropna()
+
