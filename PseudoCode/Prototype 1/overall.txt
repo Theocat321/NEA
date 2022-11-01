@@ -1,5 +1,5 @@
 # Overall logic for prototype one
-Get data from csv file and turn Data into pandas dataframe     Complete & written up 
+Get data from csv file and turn Data into pandas dataframe     Complete & written up & implemented
 Clean data                                                     Complete & written up
 Convert classification strings to integers                     Complete & written up
 Split data into training and testing data                      Complete & written up
