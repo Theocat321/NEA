@@ -1,0 +1,16 @@
+# Json file
+
+{
+    "manifest_version": 3,
+    "name": "Twitter Senti Viz",
+    "version": "1.0",
+    "author": "AO",
+    "description": "Twitter sentiment indicator",
+    "content_scripts": [
+      {
+        "matches": ["*://twitter.com/home"],
+        "js": ["main.js"],
+        "css":["main.css"]
+      }
+    ]
+}

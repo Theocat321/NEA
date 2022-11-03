@@ -1,0 +1,15 @@
+# Overall design for prototype 2
+
+# ML model
+    # Encode label column to contain 3 bins of sentiment
+    # Change model layers to have a final softmax function
+    # Train model
+
+# Chrome Extension
+    # Initalise chrome extension and add information about extension
+    # Write JS chrome extension
+        # Get timeline function
+        # JS check if the user scrolls 
+        # Add sentiment to tweet function
+
+        
