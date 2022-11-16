@@ -1,0 +1,44 @@
+# Getting twitter data from timeline 
+
+
+def getTimeLine():
+
+    tweetsNodeList = get all tweets loaded 
+
+    for x: 0 - len(tweetsNodeList):
+
+        # Checking if the tweet has already been analysed
+        if analysed does not contain tweetsNodeList[x]:
+
+            # Marking as analysed so it doesn't get processed again
+            analysedTweets.push(tweetsNodeList[x])
+
+            currentText = tweetsNodeList[x].getText # using inbuilt JS function to get tweet text
+
+            # Cleanse
+            currentText = cleanText(currentText)
+
+            # Input to model - completed in prototype 3
+            sentiment = sentimentModel(currentText)
+
+            # Creating an html element and adding the dot class to it
+            sentimentDiv = create element ("div")
+            sentimentDiv.addClass("dot")
+
+            # Add relevant colour to dot div depending on output from the model
+            if sentiment == 0:
+                sentimentDiv.addClass("negative")
+            elif sentiment == 1:
+                sentimentDiv.addClass("neutral")
+            else:
+                sentimentDiv.addClass("positive")
+
+
+            # Add the div to the page
+            tweetsNodeList[x].appendChild(sentimentDiv)
+
+
+analysedTweets = []
+
+while user scrolls:
+    getTimeLine()
