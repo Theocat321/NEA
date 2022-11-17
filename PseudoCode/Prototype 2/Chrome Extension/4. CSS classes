@@ -1,0 +1,21 @@
+# Css classes
+
+.positive{
+    background-color: green;
+}
+
+.neutral{
+    background-color: grey;
+}
+
+.negative{
+    background-color: red;
+}
+
+.dot{
+    height: 2vh;
+    width: 2vh;
+    border-radius: 10px;
+    float: right;
+    top: 0;
+}

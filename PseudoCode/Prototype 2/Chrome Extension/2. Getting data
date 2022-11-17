@@ -1,7 +1,7 @@
 # Getting twitter data from timeline 
 
 
-def getTimeLine():
+procedure getTimeLine():
 
     tweetsNodeList = get all tweets loaded 
 
@@ -32,10 +32,14 @@ def getTimeLine():
                 sentimentDiv.addClass("neutral")
             else:
                 sentimentDiv.addClass("positive")
+            endif
 
 
             # Add the div to the page
-            tweetsNodeList[x].appendChild(sentimentDiv)
+            tweetsNodeList[x].appendChild(sentimentDiv)procedure_
+        endif 
+    endfor
+endprocedure
 
 
 analysedTweets = []

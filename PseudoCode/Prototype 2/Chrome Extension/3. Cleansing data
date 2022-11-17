@@ -1,0 +1,13 @@
+# Cleaning input data
+
+function Cleanse(text):
+    cast text to string 
+
+    text = text.Lowercase()
+
+    text = text without punctuation # using regex
+
+    return text
+endfunction
+
+￼
