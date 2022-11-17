@@ -1,5 +1,0 @@
-Opening this project for development:
-
-$ source venv/bin/activate
-
-$ jupyter notebook
