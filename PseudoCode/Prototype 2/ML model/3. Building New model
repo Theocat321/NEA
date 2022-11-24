@@ -1,0 +1,23 @@
+# Build single LSTM (Long short-term memory) model
+
+# Hyper parameters that can be manually changed for testing 
+int DimentionEmbeddingLayer 
+int DimentionLSTMLayer 
+
+inputLayer = Input(shape=(TrainingPadShape, ))
+outputLayers = Embedding(VocabSize, DimentionEmbeddingLayer)(inputLayer) 
+outputLayers = LSTM(DimentionLSTMLayer, return_sequences=True)(outputLayers)
+outputLayers = GlobalMaxPooling1D()(outputLayers)
+modelLayers = Dense({Node number}, activation="relu")(modelLayers)
+modelLayers = Dense(3, activation="softmax")(modelLayers)
+
+create Model(inputLayer, outputLayers)
+
+
+
+inputLayer = Input(shape=(TrainingPadShape, ))
+modelLayers = Embedding(VocabSize +1, DimentionEmbeddingLayer)(inputLayer) # Vocabsize + 1 as indexing starts from 0
+modelLayers = LSTM(DimentionLSTMLayer, return_sequences=True)(modelLayers)
+modelLayers = GlobalMaxPooling1D()(modelLayers)
+modelLayers = Dense(64, activation="relu")(modelLayers)
+modelLayers = Dense(3, activation="softmax")(modelLayers)

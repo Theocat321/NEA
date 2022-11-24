@@ -1,0 +1,5 @@
+# Manipulating Label data
+
+# Converting previous y_train indexs to tensors.
+y_train = to_categorical(y_train, 3)
+y_test = to_categorical(y_test, 3)

@@ -1,0 +1,26 @@
+# Predicting data
+
+
+procedure predict_sentiment(text):
+    # Convert text to integers
+    text_sequence = tokenizer.texts_to_sequences(text)
+
+    # Pad the sequence with zeros
+    text_padded = pad_sequences(text_sequence, maxlen=TrainingPadShape)
+    
+    # Get values from model
+    predicted_sentiment = model.predict(text_padded)
+
+    # 3 nodes are returned for the output, determin which node has the largest value
+    if predicted_sentiment[0][0] > predicted_sentiment[0][1] and predicted_sentiment[0][0] > predicted_sentiment[0][2]:
+        print("Negative")
+    elif predicted_sentiment[0][1] > predicted_sentiment[0][0] and predicted_sentiment[0][1] > predicted_sentiment[0][2]:
+        print("Neutral")
+    else:
+        print("Positive")
+
+text = ['{inputted text}']
+predict_sentiment(text)
+
+
+
