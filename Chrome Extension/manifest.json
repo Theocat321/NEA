@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Senti Viz",
+    "version": "1.0",
+    "author": "Adam O'Neill",
+    "description": "Sentiment analysis tool for your twitter timeline",
+    "content_scripts": [
+      {
+        "matches": ["*://twitter.com/*"],
+        "js": ["main.js"],
+        "css":["main.css"]
+      }
+    ]
+}

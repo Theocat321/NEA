@@ -1,0 +1,35 @@
+/*
+ * File: /home/adamo/Adam/Coding/NEA/Chrome Extension/main.css
+ * Project: /home/adamo/Adam/Coding/NEA/Chrome Extension
+ * Created Date: Tuesday, November 29th 2022, 9:51:51 am
+ * Description: 
+ * Author: Adam O'Neill
+ * Copyright (c) 2022 Adam O'Neill
+ * -----
+ * Last Modified: Tue Nov 29 2022
+ * Modified By: Adam O'Neill
+ * -----
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
+
+ .positive{
+     background-color: green;
+ }
+ 
+ .neutral{
+     background-color: grey;
+ }
+ 
+ .negative{
+     background-color: red;
+ }
+ 
+ .dot{
+     height: 2vh;
+     width: 2vh;
+     border-radius: 10px;
+     float: right;
+     top: 0;
+ }
