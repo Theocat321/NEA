@@ -13,9 +13,8 @@
 }
 
 .dot{
-    height: 2vh;
-    width: 2vh;
-    border-radius: 10px;
-    float: right;
-    top: 0;
+    Appropriately sizes the dot and places it 
+    in the corner of the tweet with rounded 
+    corners
 }
+
