@@ -4,7 +4,7 @@
  * Created Date: Tuesday, November 29th 2022, 9:38:42 am
  * Author: Adam O'Neill
  * -----
- * Last Modified: Tue Nov 29 2022
+ * Last Modified: Fri Dec 02 2022
  * Modified By: Adam O'Neill
  * -----
  * Copyright (c) 2022 Adam O'Neill
@@ -42,7 +42,7 @@
       sentimentDiv.classList.add('dot');
       
       // Place holder value
-      var sentiment = 0
+      var sentiment = 2
       // Dependant on sentiment returned
       if (sentiment == 0){
         sentimentDiv.classList.add('negative');  
@@ -51,9 +51,6 @@
       } else if (sentiment == 2){
         sentimentDiv.classList.add('positive'); 
       }
-        
-
-      sentimentDiv.classList.add('positive');
   
       // add relevenat subchild dot 
       tweetsNodeList[i].appendChild(sentimentDiv)   
