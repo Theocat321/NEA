@@ -1,0 +1,16 @@
+# Tokenizing data (JS)
+
+function encodeText(text){
+    encodedText = ""
+    split text into words
+    For everyWord in words:
+        everyWord = WordEmbeddings[everyWord]
+        if undefined:
+            everyWord = 0
+        encodedText += everyWord
+    return encodedText
+}
+
+constant WordEmbeddings = {......} //Dictionary of all words and corespodning numbers
+
+

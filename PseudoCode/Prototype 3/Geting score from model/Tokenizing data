@@ -1,5 +1,0 @@
-# Tokenizing data 
-
-# using serialized dictionary convert words into integers
-# Padd the array [[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 124 435 34 234 236]]
-# Input into model

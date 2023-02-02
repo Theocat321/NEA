@@ -1,0 +1,13 @@
+# Seralize embedding dictionary
+
+# Python
+
+import json
+
+fileToDump = open("Embeddings.json","w")
+
+json.dump(wordindex,fileToDump)
+
+fileToDump.close()
+
+

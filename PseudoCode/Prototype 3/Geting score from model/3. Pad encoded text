@@ -1,0 +1,11 @@
+#Padding text
+
+function padText(text){
+    paddedText = ""
+    padnum = PADDINGSHAPE - text.length
+    for (let i = 0, i<padnum, i++){
+        paddedText += "0"
+    }
+    paddedText += text
+    return paddedText
+}
