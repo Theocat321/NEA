@@ -6,7 +6,7 @@ function encodeText(text){
     For everyWord in words:
         everyWord = WordEmbeddings[everyWord]
         if undefined:
-            everyWord = 0
+            skip
         encodedText += everyWord
     return encodedText
 }

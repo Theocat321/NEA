@@ -1,11 +1,11 @@
 #Padding text
 
-function padText(text){
-    paddedText = ""
-    padnum = PADDINGSHAPE - text.length
-    for (let i = 0, i<padnum, i++){
-        paddedText += "0"
-    }
-    paddedText += text
-    return paddedText
+
+function padText(inpText){
+  const SHAPE = 31 // Determined by the input required by model
+  indexes = inpText.split(" ")
+  zeroNum = SHAPE - indexes.length // Calculate number of zeros needed to add
+  for (let i = 0; i < zeroNum; i++){
+    indexes.unshift("0") // Adds zero to start of list
+  }
 }

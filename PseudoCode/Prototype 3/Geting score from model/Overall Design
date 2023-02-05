@@ -1,4 +1,4 @@
-1. Serialize Embeddings dictionary from Python
+1. Serialize Embeddings dictionary from Python ✅ 
 2. Tokenise text from tweets
 3. Padd the array of tokenized data
 4. Input clean data to model
