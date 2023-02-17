@@ -1,2 +1,38 @@
 ## Requesting Server for model output
 
+const url = "http://server.com:8000" // URL of django server
+
+function getTimeLine():
+    ...
+    // Creates the div for the dot before any processing
+    const sentimentDiv = document.createElement('div');
+    sentimentDiv.classList.add('dot');
+    ...
+
+    fetch(url,{
+      method:"POST",
+      headers:{
+          'Content-Type': 'application/json' // tells the server it is a json
+      },
+      body: JSON.stringify({
+          "cleanedText":paddedText // This is from 
+      })
+    })
+    .then(res => res.json()) // Converts recieved data to a json
+      .then(data => {
+
+        // Recieves sentiment from server
+        sentiment = data["sentiment"]
+
+        // Class colour ependant on sentiment returned from server
+        if sentiment == 0:
+          sentimentDiv.classList.add('negative');  
+        else if sentiment == 1:
+          sentimentDiv.classList.add('neutral'); 
+        else if sentiment == 2:
+          sentimentDiv.classList.add('positive'); 
+        }
+      })
+    // add relevenat subchild dot 
+    tweetsNodeList[i].appendChild(sentimentDiv)  
+  };

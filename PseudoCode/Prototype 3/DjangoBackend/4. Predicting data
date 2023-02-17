@@ -1,0 +1,28 @@
+# Predicting data on client request
+
+
+MODEL_CONST = load_model("{modelFile}")
+
+def sentiment_prediction(data):
+    # gets attribute from json
+    data = data["attributeName"]
+    dataArr = []
+
+    # Convert data into integers and place into new array
+    for index in data:
+        index = int(index)
+        dataArr.append(index)
+
+    Convert dataArr into 2d array
+
+    predicted_sentiment = MODEL_CONST.predict(dataArr)
+
+    # Sentiment decision logic
+
+    if first item is greater than second and is greater than third
+        return 0
+    elif first item is less than second and second is greater than third
+        return 1
+    else
+        return 2
+    

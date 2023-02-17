@@ -1,0 +1,38 @@
+sentimentBackend/urls.py
+urlpatterns = [
+    ...
+    path("",include("sentimentProcessing.urls"))
+]
+
+# Array now includes the django app sentimentProcessing at the root ""
+
+--- --- ---
+sentimentProcessing/urls.py
+
+imports ...
+
+urlpatterns = [
+    path('process_sentiment/', process_sentiment),
+]
+
+# At "process_sentiment" directory (http://example.com/process_sentiment), it will run the process_sentiment subroutine
+
+
+sentimentBackend/settings.py
+
+
+INSTALLED_APPS = [
+    ...
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    ...
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+# Allowed sites to request
+CORS_ORIGIN_WHITELIST = [
+    'https://twitter.com',  
+]
+

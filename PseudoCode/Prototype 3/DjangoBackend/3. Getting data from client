@@ -1,0 +1,18 @@
+# Server Processing
+
+File: sentimentBackend/views.py 
+
+Imports ...
+
+def process_sentiment(request):
+    data = load json from request
+
+
+    # Process the data using your custom logic
+    sentiment = sentiment_prediction(data)
+
+    # Serialize the processed data to JSON
+    response = {"sentiment":sentiment}
+
+    # Return a JSON response with the processed data
+    return JsonResponse(response)

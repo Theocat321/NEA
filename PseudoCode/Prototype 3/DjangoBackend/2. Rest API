@@ -1,8 +1,0 @@
-# REST API
-
-sentimentBackend/views.py 
-
-def getSentiment(request):
-    model = loadModel
-    prediction = model.predict(request)
-    
