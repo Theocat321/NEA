@@ -4,7 +4,7 @@
  * Created Date: Tuesday, November 29th 2022, 9:38:42 am
  * Author: Adam O'Neill
  * -----
- * Last Modified: Sun Feb 05 2023
+ * Last Modified: Fri Feb 17 2023
  * Modified By: Adam O'Neill
  * -----
  * Copyright (c) 2022 Adam O'Neill
@@ -37,9 +37,11 @@ function getTimeLine() {
     currenttext = tweetsNodeList[i].textContent
 
     // Cleanse the text
-    let encodedText = encodeText(currenttext)
+    let tokenizedText = tokenizeText(currenttext)
 
-    let paddedText = padText(encodedText)
+    let paddedText = padText(tokenizedText)
+
+    // Check if undefined...
 
     // input to model
 
@@ -67,19 +69,19 @@ function getTimeLine() {
 
 // Function for encoding the data
 
-function encodeText(inpData){
+function tokenizeText(inpData){
   // Loop though each word in the text and encode to digit
   words = inpData.split(" ");
-  var encodedStr = ""
-  var cEncodedStr = ""
+  var tokenizedString = ""
+  var ctokenizedString = "" // Stands for current tokenizedString
   for (let i = 0; i < words.length; i++){
-    cEncodedStr = WordEmbeddings[words[i]]
-    if (cEncodedStr != undefined){
-      encodedStr += cEncodedStr
-      encodedStr += " "
+    ctokenizedString = WordEmbeddings[words[i]]
+    if (ctokenizedString != undefined){
+      tokenizedString += ctokenizedString
+      tokenizedString += " "
     }
   }
-  return encodedStr
+  return tokenizedString
 }
 
 function padText(inpText){
@@ -88,9 +90,15 @@ function padText(inpText){
   indexes = inpText.split(" ")
   zeroNum = SHAPE - indexes.length
   // Add calculated number of zeros to the front of the indexs list
+  if (zeroNum < 0 ){
+    // The case when there are more than 31 correctly identified words
+    // Correct analysis cannot occur so display a neutral
+    return undefined
+  }
   for (let i = 0; i < zeroNum; i++){
     indexes.unshift("0")
   }
+  return indexes
 }
 
   
@@ -106,4 +114,5 @@ const WordEmbeddings =
 window.onscroll = function(){
   getTimeLine();
 };
+
 
