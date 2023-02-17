@@ -75,6 +75,8 @@ function tokenizeText(inpData){
   var tokenizedString = ""
   var ctokenizedString = "" // Stands for current tokenizedString
   for (let i = 0; i < words.length; i++){
+    words[i] = words[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+    words[i] = words[i].toLowerCase()
     ctokenizedString = WordEmbeddings[words[i]]
     if (ctokenizedString != undefined){
       tokenizedString += ctokenizedString
