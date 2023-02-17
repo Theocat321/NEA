@@ -1,7 +1,2 @@
-# Inputting data into Model (JS)
+## Requesting Server for model output
 
-import tensorflowjs
-
-const model = await loadLayersModel(‘{path}’);
-
-const sentiment = model.predict(currentText);

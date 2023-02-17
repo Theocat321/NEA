@@ -1,0 +1,6 @@
+Initalize project
+
+all in bash
+
+django-admin startproject sentimentBackend
+python3 manage.py runsever # to run server for the backend
