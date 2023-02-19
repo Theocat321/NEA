@@ -1,11 +1,11 @@
 ## Requesting Server for model output
 
-const url = "http://server.com:8000" // URL of django server
+url = "http://server.com:8000" // URL of django server global variable
 
 function getTimeLine():
     ...
     // Creates the div for the dot before any processing
-    const sentimentDiv = document.createElement('div');
+    sentimentDiv = document.createElement('div');
     sentimentDiv.classList.add('dot');
     ...
 
@@ -14,9 +14,9 @@ function getTimeLine():
       headers:{
           'Content-Type': 'application/json' // tells the server it is a json
       },
-      body: JSON.stringify({
-          "cleanedText":paddedText // This is from 
-      })
+      body: {
+          "cleanedText":paddedText // Defiened earlier in the prototype
+      }
     })
     .then(res => res.json()) // Converts recieved data to a json
       .then(data => {
