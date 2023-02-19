@@ -8,7 +8,7 @@ def process_sentiment(request):
     data = load json from request
 
 
-    # Process the data using your custom logic
+    # Make prediction from model in another subroutine
     sentiment = sentiment_prediction(data)
 
     # Serialize the processed data to JSON
