@@ -19,6 +19,7 @@ def sentiment_prediction(data):
 
     # Sentiment decision logic
 
+    All refering to the predicted_sentiment array
     if first item is greater than second and is greater than third
         return 0
     elif first item is less than second and second is greater than third
