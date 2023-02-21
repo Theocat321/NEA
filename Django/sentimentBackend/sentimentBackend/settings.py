@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v*cce5$(&ic$1m@c2&3b0v9f^*o!o0@t%$j%$vmkki9pow-*3g'
+SECRET_KEY = 'django-insecure-v*cce5$(&ic$1m@c2&3b0v9f^*o!o0@t%$j%$vmkki9pow-*3h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'sentimentBackend.urls'
@@ -121,3 +123,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Allowed sites to request
+CORS_ORIGIN_WHITELIST = [
+    'https://twitter.com',  
+]
+
+# CORS_ORIGIN_ALLOW_ALL = True // ALLOWS ALL REQUESTS
