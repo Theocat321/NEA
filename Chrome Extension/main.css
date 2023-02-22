@@ -6,7 +6,7 @@
  * Author: Adam O'Neill
  * Copyright (c) 2022 Adam O'Neill
  * -----
- * Last Modified: Thu Dec 08 2022
+ * Last Modified: Tue Feb 21 2023
  * Modified By: Adam O'Neill
  * -----
  * HISTORY:
@@ -27,12 +27,13 @@
  }
  
  .dot{
-     height: 2vh;
-     width: 2vh;
-     min-width: 10px;
-     min-height: 10px;
-     border-radius: 10px;
-     right: 0;
-     top: 0;
-     position: absolute;
- }
+    height: 2vh;
+    width: 2vh;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    cursor: grab;
+}
