@@ -8,7 +8,7 @@ import json
 from keras.models import load_model 
 
 # Defining model constant
-MODEL_CONST = load_model("../../Model/Final_model.hdf5")
+MODEL_CONST = load_model("Final_model.hdf5")
 
 # Create your views here.
 
