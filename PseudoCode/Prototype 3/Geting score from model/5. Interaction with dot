@@ -1,0 +1,44 @@
+# Interaction with dot
+
+main.js
+
+function getTimeLine():
+    ...
+    displayText = create element ("div")
+    displayText.addClass('displayText')
+    sentimentDiv.addChild("displayText") # add text as a child to sentiment div
+    ...
+
+    # Add appropriate text for the colour of the div
+    if sentiment = positive:
+        ...
+        displayText.text = "postive"
+    if sentiment = neutral:
+        ...
+        displayText.text = "neutral"
+    if sentiment = negative:
+        ...
+        displayText.text = "negative"
+
+main.css
+
+.dot{
+    ...
+    font-size:smaller;
+    transition:{transition-time};
+}
+
+.displayText{
+    height: inherit; #makes the height stay size of container div
+    opacity: 0;
+    transition: {appropriate time};
+}
+
+.dot:hover{
+    width:{appropriate-value};
+    height:{appropriate-value};
+}
+
+.dot:hover .displayText{ # when the dot is hovered change display text
+    opacity:1;
+}
