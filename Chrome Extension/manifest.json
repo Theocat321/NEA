@@ -5,8 +5,7 @@
     "author": "Adam O'Neill",
     "description": "Sentiment analysis tool for your twitter timeline",
     "permissions": [
-      "webRequest",
-      "http://127.0.0.1:8000/"
+      "webRequest"
     ],
     "content_scripts": [
       {
