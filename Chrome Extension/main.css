@@ -6,7 +6,7 @@
  * Author: Adam O'Neill
  * Copyright (c) 2022 Adam O'Neill
  * -----
- * Last Modified: Tue Feb 21 2023
+ * Last Modified: Tue Feb 28 2023
  * Modified By: Adam O'Neill
  * -----
  * HISTORY:
@@ -15,25 +15,52 @@
  */
 
  .positive{
-     background-color: green;
+   background-color: green;
  }
  
  .neutral{
-     background-color: grey;
+   background-color: grey;
  }
  
  .negative{
-     background-color: red;
+   background-color: red;
  }
  
  .dot{
-    height: 2vh;
-    width: 2vh;
-    min-width: 10px;
-    min-height: 10px;
-    border-radius: 10px;
-    right: 0;
-    top: 0;
-    position: absolute;
-    cursor: grab;
+   height: 2vh;
+   width: 2vh;
+   min-width: 10px;
+   min-height: 10px;
+   border-radius: 10px;
+   right: 0;
+   top: 0;
+   position: absolute;
+   cursor: grab;
+   font-size: smaller;
+
+   transition: 1s;
+}
+
+
+/* Animation */
+
+.displayText{
+   height: inherit; /* Prevents text spilling under*/
+   color: black;
+   opacity: 0;
+   padding-bottom: 6px;
+   padding-left: 5px;
+   padding-right: 18px;
+   overflow:hidden;
+   transition: .8s;
+}
+
+.dot:hover{
+   width: 75px;
+   height: 20px;
+}
+
+.dot:hover .displayText{
+   opacity: 1;
+   color: white;
 }
