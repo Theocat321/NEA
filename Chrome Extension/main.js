@@ -4,7 +4,7 @@
  * Created Date: Tuesday, November 29th 2022, 9:38:42 am
  * Author: Adam O'Neill
  * -----
- * Last Modified: Mon Feb 27 2023
+ * Last Modified: Tue Feb 28 2023
  * Modified By: Adam O'Neill
  * -----
  * Copyright (c) 2022 Adam O'Neill
@@ -41,7 +41,7 @@ function getTimeLine() {
     let tokenizedText = tokenizeText(currenttext)
 
     let paddedText = padText(tokenizedText)
-
+    
     // Check if undefined...
     if (paddedText == undefined){
       continue
@@ -50,6 +50,10 @@ function getTimeLine() {
     // Creates the div for the dot before any processing
     const sentimentDiv = document.createElement('div');
     sentimentDiv.classList.add('dot');
+
+    const displayText = document.createElement('div')
+    displayText.classList.add('displayText')
+    sentimentDiv.appendChild(displayText)
 
     // input to model
     // Request Server 
@@ -70,11 +74,14 @@ function getTimeLine() {
 
         // Class colour ependant on sentiment returned from server
         if (sentiment == 0){
+          displayText.textContent = "Negative"
           sentimentDiv.classList.add('negative');  
         } else if (sentiment == 1){
           sentimentDiv.classList.add('neutral'); 
+          displayText.textContent = "Neutral"
         } else if (sentiment == 2){
           sentimentDiv.classList.add('positive'); 
+          displayText.textContent = "Positive"
         }
       })
     // add relevenat subchild dot to DOM
@@ -125,7 +132,7 @@ function padText(inpText){
 var analysedTweets = [];
 
 // URL of server to request
-const url = 'http://127.0.0.1:8000/process_sentiment/'
+const url = 'https://sentimentbackend.adamoneill.info/process_sentiment/'
 
 // Storage of  dictionary
 
