@@ -4,9 +4,6 @@
     "version": "1.0",
     "author": "Adam O'Neill",
     "description": "Sentiment analysis tool for your twitter timeline",
-    "permissions": [
-      "webRequest"
-    ],
     "content_scripts": [
       {
         "matches": ["*://twitter.com/*"],
