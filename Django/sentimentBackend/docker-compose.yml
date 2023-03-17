@@ -1,8 +1,13 @@
 version: '3.9'
 services:
-  django:
-    container_name: SentimentAnalysis_Backend
-    image: sentimentbackend:latest
+  django_gunicorn:
+    container_name: sentimentbackendlive
+    image: sentimentbackend-gunicorn:latest
     build: .
     ports:
-      - 8000:8000
+      - 5000:5000
+    env_file:
+      - .env
+
+
+
